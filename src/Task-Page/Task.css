@@ -1,0 +1,44 @@
+.task-flex{
+    height: 600px;
+    text-align: center;
+    background-color: rgb(228, 219, 204);
+}
+.task-flex h1{
+    font-weight: bold;
+    color: rgb(235, 131, 131);
+}
+.task-flex input{
+    border: none;
+    width: 240px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 10px;
+    margin-top: 20px;
+}
+.task-flex textarea{
+    border: none;
+    width: 240px;
+    display: block;
+    height: 70px;
+    margin-left: 570px;
+    margin-top: 20px;
+}
+.task-flex button{
+    border: none;
+    margin-top: 15px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(235, 131, 131);
+}
+.task-flex .back{
+    border: none;
+    margin-top: 15px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 90%;
+    color: #fff;
+    background-color: rgb(235, 131, 131);
+}

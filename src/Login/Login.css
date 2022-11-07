@@ -1,0 +1,38 @@
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: skyblue;   
+}
+.login-flex{
+    height: 600px;
+    background-color: skyblue;
+}
+.login-flex h2{
+    text-align: center;
+    color: #fff;
+    background-color: skyblue;
+}
+.log{
+    padding-top: 150px;
+}
+.login-flex input{
+    align-items: center;
+    display: block;
+    margin-left: 530px;
+    margin-top: 30px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+}
+/* form{
+    padding-top: 10px;
+} */
+.login-flex button{
+    margin-left: 630px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    padding: 5px;
+    width: 100px;
+}
