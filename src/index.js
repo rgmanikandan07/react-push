@@ -9,7 +9,7 @@ import Task from './Task-Page/Task'
 import { stateContext } from './Context/stateContext';
 import { useReducer } from 'react';
 import { stateReducer } from './Context/reducer';
-import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import {initalvalue} from "./Context/reducer"
 
 function RoutesComponent() {

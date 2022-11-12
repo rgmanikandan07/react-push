@@ -1,49 +1,34 @@
-import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom';
-import './Home.css';
+import React, { useContext } from 'react'
+import { createSearchParams, Link,useNavigate } from 'react-router-dom';
+import './Home.css';  
 import { stateContext } from '../Context/stateContext';
+// import { type } from '@testing-library/user-event/dist/type';
 
 
 const Home = () => {
   const { state, dispatch } = useContext(stateContext);
-    console.log("statecont", state);
+  console.log("state", state);  
 
-  // const [isEditing,setIsEditing] = useState(false)
-  // // const [txt,setTask] = useState(txt.task) 
+  const navigate = useNavigate();
 
-  // const handleClick = (tap) => {
-  //   remove(tap.target.tap)
-  // }
-  // const toggleForm = () =>{
-  //   setIsEditing(!isEditing)
-  // }
-  // const handleSubmit = (tap) =>{
-  //   dispatch(...Home.tap.target.value)
+  // const listitems = () => {
+  //   navigate("/Task")
   // }
 
+  const deleteitems = (id) => {
+    dispatch({type:"deltask",payload:id})
+  }
 
+  const edititems = (id) => {
+    navigate({
+      pathname: "/Task",
+      search: createSearchParams({
+        id:id
+      }).toString()
+    })    
+  }
 
-  // let result;
-  // if(isEditing){
-  //   result = (
-  //     <div>
-  //       <from>
-  //         <input value={state} onChange={handleSubmit} />
-  //         <button>Save</button>
-  //       </from>
-  //     </div>
-  //   )
-  // }else{
-  //   result = (
-  //     <div>
-  //       <li tap={state.tap} onClick={toggleComplete} className={state.completed? "task completed": "Task-task"}></li>
-  //       <button onClick={toggleForm}>Edit</button>
-  //       <button onClick={handleClick}>delete</button>
-
-  //     </div>
-  //   )
-  // }
-
+   
 
 
 
@@ -55,12 +40,16 @@ const Home = () => {
           <h2><Link to={"/"}><button>Go Back</button></Link></h2>
           <h1><Link to={"/Task"}><button>Add Task</button></Link></h1>
         </div><hr></hr>
-        {/* <div className='home-btn'>
-          <button>EDIT</button>
-          <button>DELETE</button>
-        </div> */}
 
-        {state.task?.map((item, index) => <h2>{item.txt}</h2>)}
+        {state.tasks?.map((item, index) => {
+          return (
+            <div key={index} className="ed-del">
+              {item.txt}<br></br>{item.msg}<br></br>{item.date}
+                <button onClick={()=> edititems(item.id)}>edit</button>
+                <button onClick={()=> deleteitems(item.id)}>delete</button>  
+            </div>
+          )
+        })}
       </div>
     </div>
   )

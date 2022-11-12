@@ -41,3 +41,12 @@
     margin-left: 10px;
     font-size: 15px;
 }
+.ed-del button{
+    border: none;
+    background-color: rgb(218, 124, 81);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+}

@@ -36,9 +36,9 @@ const Login = () => {
   };
 
   return (
-    <div class="login-flex">
-      <div class="container">
-        <div class="log">
+    <div className="login-flex">
+      <div className="container">
+        <div className="log">
           <h2>Login</h2>
           <form>
             <input value={username} placeholder="Username" onChange={handleUserName} />
