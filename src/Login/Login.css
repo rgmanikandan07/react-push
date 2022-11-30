@@ -14,9 +14,14 @@
     background-color: skyblue;
 }
 .log{
-    padding-top: 150px;
+    text-align: center;
+    flex-wrap: wrap;
 }
-.login-flex input{
+.log Button{
+    text-align: center;
+    top: 5%;
+}
+/* .login-flex input{
     align-items: center;
     display: block;
     margin-left: 530px;
@@ -24,15 +29,15 @@
     padding: 8px;
     width: 300px;
     border: none;
-}
+} */
 /* form{
     padding-top: 10px;
 } */
-.login-flex button{
+/* .login-flex button{
     margin-left: 630px;
     margin-top: 20px;
     margin-bottom: 20px;
     border: none;
     padding: 5px;
     width: 100px;
-}
+} */

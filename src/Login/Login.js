@@ -3,6 +3,8 @@ import { useState } from 'react';
 import './Login.css';
 import User from './user.json'
 import { useNavigate } from "react-router-dom";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -41,9 +43,9 @@ const Login = () => {
         <div className="log">
           <h2>Login</h2>
           <form>
-            <input value={username} placeholder="Username" onChange={handleUserName} />
-            <input value={userpwd} type="password" placeholder="Password" onChange={handleUserPwd} />
-            <button onClick={(ev) => handleSubmit(ev)}>Login</button>
+          <TextField id="outlined-basic" label="Username" variant="outlined" onChange={handleUserName} /><br></br>
+          <TextField id="outlined-password-input" label="Password" type="password" autoComplete="current-password" onChange={handleUserPwd}/><br></br>
+          <Button variant="contained" type="password" onClick={(ev) => handleSubmit(ev)}>Login</Button>
           </form>
         </div>
       </div>
